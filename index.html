@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <!-- <div id="main" ></div> -->
@@ -159,13 +160,17 @@
     </div>
 <!-- End Header -->
 <!-- Begin Slider -->
-    <div class="slider">
+<div class="next-slide">
+    <div class="slider fade">
+        <div class="img-next-slider">
+            <img src="assets/images/img-slider.png" alt="">
+        </div>
         <div class="arrow-slider">
-            <div class="arrow-left">
-                <i id="arrow-1" class="fa-solid fa-angle-left next-left-slider"></i>
+            <div class="arrow-left" onclick="plusSlides(-1)">
+                <i id="arrow-1" class="fa-solid fa-angle-left next-left-slider" ></i>
             </div>
-            <div class="arrow-right">
-                <i  class="fa-solid fa-angle-right next-right-slider"></i>
+            <div class="arrow-right" onclick="plusSlides(1)">
+                <i id="arrow-2" class="fa-solid fa-angle-right next-right-slider" ></i>
             </div>
         </div>
         <div class="text-slider">
@@ -175,6 +180,47 @@
             <a class="shop-now hov-text" href="">Shop Now</a>
         </div>
     </div>
+
+    <div class="slider next-slide-second fade">
+        <div class="img-next-slider">
+            <img src="assets/images/img-slider2.png" alt="">
+        </div>
+        <div class="arrow-slider">
+            <div class="arrow-left" onclick="plusSlides(-1)">
+                <i id="arrow-1" class="fa-solid fa-angle-left next-left-slider"></i>
+            </div>
+            <div class="arrow-right" onclick="plusSlides(1)">
+                <i id="arrow-2" class="fa-solid fa-angle-right next-right-slider"></i>
+            </div>
+        </div>
+        <div class="text-slider">
+            
+            <h1 class="text-heading-slider">Find Any <span class="chuxanh">Medicine</span> <br> You Need!</h1>
+            <p class="text-description">Free Standard Shipping Everyday</p>
+            <a class="shop-now hov-text" href="">Shop Now</a>
+        </div>
+    </div>
+
+    <div class="slider next-slide-second fade">
+        <div class="img-next-slider">
+            <img src="assets/images/img-slider3.png" alt="">
+        </div>
+        <div class="arrow-slider">
+            <div class="arrow-left" onclick="plusSlides(-1)">
+                <i id="arrow-1" class="fa-solid fa-angle-left next-left-slider"></i>
+            </div>
+            <div class="arrow-right" onclick="plusSlides(1)">
+                <i id="arrow-2" class="fa-solid fa-angle-right next-right-slider"></i>
+            </div>
+        </div>
+        <div class="text-slider">
+            
+            <h1 class="text-heading-slider">Find Any <span class="chuxanh">Medicine</span> <br> You Need!</h1>
+            <p class="text-description">Free Standard Shipping Everyday</p>
+            <a class="shop-now hov-text" href="">Shop Now</a>
+        </div>
+    </div>
+</div>
 <!--End Slider  -->
 <!-- Begin item-Row -->
     <div class="item container">
@@ -215,30 +261,22 @@
     <div class="sale-hot container">
     <div class="sale-main ">
         <div class="img-deal1">
-            <div class="time-countdown">
+            <div class="time-countdown" id="countdown">
                 <div class="countdown days">
-                    <div class="d-h-m-s">
-                        <h5>230</h5>
-                        <p>DAYS</p>
-                    </div>
+                    <h5 id="days">230</h5>
+                    <p>DAYS</p>
                 </div>
                 <div class="countdown hrs">
-                    <div class="d-h-m-s">
-                        <h5>24</h5>
-                        <p>HRS</p>
-                    </div>
+                    <h5 id="hrs">24</h5>
+                    <p>HRS</p>
                 </div>
                 <div class="countdown mins">
-                    <div class="d-h-m-s">
-                        <h5>40</h5>
-                        <p>MINS</p>
-                    </div>
+                    <h5 id="mins">40</h5>
+                    <p>MINS</p>
                 </div>
                 <div class="countdown sec">
-                    <div class="d-h-m-s">
-                        <h5>60</h5>
-                        <p>SEC</p>
-                    </div>
+                    <h5 id="sec">60</h5>
+                    <p>SEC</p>
                 </div>
             </div>
             <h4 class="text-sale">BEAUTY & COSMETICS</h4>
@@ -268,7 +306,7 @@
     </div>
     </div>
 <!-- End Sale-hot -->
-<!-- Begin Top salling -->
+<!-- Begin Top selling -->
     <div class="top-selling container">
         <div class="toptop-selling">
             <div class="selling-title">
@@ -276,105 +314,196 @@
                 <p>Products</p>
             </div>
             <div class="next-arrow-title">
-                <div class="arrowleft">
+                <div class="arrowleft" onclick="plusSelling(-1)">
                     <i class="ti-angle-left"></i>
                 </div>
-                <div class="arrowright">
+                <div class="arrowright" onclick="plusSelling(1)">
                     <i class="ti-angle-right"></i>
                 </div>
             </div>
         </div>    
-        <div class="items-selling">
-            <div class="r1">
-                <div class="items item1">
-                    <img src="assets/images/tsell1.png" alt="">
-                    <span>
-                        Nature's Bounty Biotin 
-                        <br>
-                        10000 MCG
-                    </span>
-                        <p>$30.00</p>
-                    <p id="addcart">ADD CART</p>
-                </div>
-                <div class="items item2">
-                    <img src="assets/images/tsell2.png" alt="">
-                    <span>
-                        Best Colon Detox Formula
-                        <br>
-                        Advanced Colon
-                    </span>
-                    <div id="gach">
-                        <del>$35.00</del>
-                        <p>$30.00</p>
+        <div class="items-selling fade">
+            <div class="items-selling-next">
+                <div class="r1">
+                    <div class="items item1">
+                        <img src="assets/images/tsell1.png" alt="">
+                        <span>
+                            Nature's Bounty Biotin 
+                            <br>
+                            10000 MCG
+                        </span>
+                            <p>$30.00</p>
+                        <p id="addcart">ADD CART</p>
                     </div>
-                    <p id="addcart">ADD CART</p>
+                    <div class="items item2">
+                        <img src="assets/images/tsell2.png" alt="">
+                        <span>
+                            Best Colon Detox Formula
+                            <br>
+                            Advanced Colon
+                        </span>
+                        <div id="gach">
+                            <del>$35.00</del>
+                            <p>$30.00</p>
+                        </div>
+                        <p id="addcart">ADD CART</p>
+                    </div>
+                    <div class="items item3">
+                        <img src="assets/images/tsell3.png" alt="">
+                        <span>
+                            Natural Factors Vitamin C
+                            <br>
+                            Blueberry Rasp
+                        </span>
+                            <p>$30.00</p>
+                        <p id="addcart">ADD CART</p>
+                    </div>
+                    <div class="items item4">
+                        <img src="assets/images/tsell4.png" alt="">
+                        <span>
+                            Jarrow Formulas
+                            <br>
+                            Methylcobalamin
+                        </span>
+                            <p>$30.00</p>
+                        <p id="addcart">ADD CART</p>
+                    </div>
                 </div>
-                <div class="items item3">
-                    <img src="assets/images/tsell3.png" alt="">
-                    <span>
-                        Natural Factors Vitamin C
-                        <br>
-                        Blueberry Rasp
-                    </span>
-                        <p>$30.00</p>
-                    <p id="addcart">ADD CART</p>
-                </div>
-                <div class="items item4">
-                    <img src="assets/images/tsell4.png" alt="">
-                    <span>
-                        Jarrow Formulas
-                        <br>
-                        Methylcobalamin
-                    </span>
-                        <p>$30.00</p>
-                    <p id="addcart">ADD CART</p>
+                <div class="r2">
+                    <div class="items item5">
+                        <img src="assets/images/tsell5.png" alt="">
+                        <span>
+                            Nature's Bounty Biotin 
+                            <br>
+                            10000 MCG
+                        </span>
+                            <p>$30.00</p>
+                        <p id="addcart">ADD CART</p>
+                    </div>
+                    <div class="items item6">
+                        <img src="assets/images/tsell6.png" alt="">
+                        <span>
+                            Best Colon Detox Formula
+                            <br>
+                            Advanced Colon
+                        </span>
+                            <p>$30.00</p>
+                        <p id="addcart">ADD CART</p>
+                    </div>
+                    <div class="items item7">
+                        <img src="assets/images/tsell7.png" alt="">
+                        <span>
+                            Natural Factors Vitamin C
+                            <br>
+                            Blueberry Rasp
+                        </span>
+                            <p>$30.00</p>
+                        <p id="addcart">ADD CART</p>
+                    </div>
+                    <div class="items item8">
+                        <img src="assets/images/tsell8.png" alt="">
+                        <span>
+                            Jarrow Formulas
+                            <br>
+                            Methylcobalamin
+                        </span>
+                            <p>$30.00</p>
+                        <p id="addcart">ADD CART</p>
+                    </div>
                 </div>
             </div>
-            <div class="r2">
-                <div class="items item5">
-                    <img src="assets/images/tsell5.png" alt="">
-                    <span>
-                        Nature's Bounty Biotin 
-                        <br>
-                        10000 MCG
-                    </span>
-                        <p>$30.00</p>
-                    <p id="addcart">ADD CART</p>
+            <div class="items-selling-next">
+                <div class="r1">
+                    <div class="items item9">
+                        <img src="assets/images/tsell1.png" alt="">
+                        <span>
+                            Nature's Bounty Biotin 
+                            <br>
+                            10000 MCG
+                        </span>
+                            <p>$30.00</p>
+                        <p id="addcart">ADD CART</p>
+                    </div>
+                    <div class="items item10">
+                        <img src="assets/images/tsell2.png" alt="">
+                        <span>
+                            Best Colon Detox Formula
+                            <br>
+                            Advanced Colon
+                        </span>
+                        <div id="gach">
+                            <del>$35.00</del>
+                            <p>$30.00</p>
+                        </div>
+                        <p id="addcart">ADD CART</p>
+                    </div>
+                    <div class="items item11">
+                        <img src="assets/images/tsell11.png" alt="">
+                        <span>
+                            Natural Factors Vitamin C
+                            <br>
+                            Blueberry Rasp
+                        </span>
+                            <p>$30.00</p>
+                        <p id="addcart">ADD CART</p>
+                    </div>
+                    <div class="items item12 ">
+                        <img src="assets/images/tsell12.png" alt="">
+                        <span>
+                            Jarrow Formulas
+                            <br>
+                            Methylcobalamin
+                        </span>
+                            <p>$30.00</p>
+                        <p id="addcart">ADD CART</p>
+                    </div>
                 </div>
-                <div class="items item6">
-                    <img src="assets/images/tsell6.png" alt="">
-                    <span>
-                        Best Colon Detox Formula
-                        <br>
-                        Advanced Colon
-                    </span>
-                        <p>$30.00</p>
-                    <p id="addcart">ADD CART</p>
-                </div>
-                <div class="items item7">
-                    <img src="assets/images/tsell7.png" alt="">
-                    <span>
-                        Natural Factors Vitamin C
-                        <br>
-                        Blueberry Rasp
-                    </span>
-                        <p>$30.00</p>
-                    <p id="addcart">ADD CART</p>
-                </div>
-                <div class="items item8">
-                    <img src="assets/images/tsell8.png" alt="">
-                    <span>
-                        Jarrow Formulas
-                        <br>
-                        Methylcobalamin
-                    </span>
-                        <p>$30.00</p>
-                    <p id="addcart">ADD CART</p>
+                <div class="r2">
+                    <div class="items item13">
+                        <img src="assets/images/tsell5.png" alt="">
+                        <span>
+                            Nature's Bounty Biotin 
+                            <br>
+                            10000 MCG
+                        </span>
+                            <p>$30.00</p>
+                        <p id="addcart">ADD CART</p>
+                    </div>
+                    <div class="items item14">
+                        <img src="assets/images/tsell6.png" alt="">
+                        <span>
+                            Best Colon Detox Formula
+                            <br>
+                            Advanced Colon
+                        </span>
+                            <p>$30.00</p>
+                        <p id="addcart">ADD CART</p>
+                    </div>
+                    <div class="items item15">
+                        <img src="assets/images/tsell15.png" alt="">
+                        <span>
+                            Natural Factors Vitamin C
+                            <br>
+                            Blueberry Rasp
+                        </span>
+                            <p>$30.00</p>
+                        <p id="addcart">ADD CART</p>
+                    </div>
+                    <div class="items item16">
+                        <img src="assets/images/tsell16.png" alt="">
+                        <span>
+                            Jarrow Formulas
+                            <br>
+                            Methylcobalamin
+                        </span>
+                            <p>$30.00</p>
+                        <p id="addcart">ADD CART</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-<!-- End Top salling -->
+<!-- End Top selling -->
 <!-- Begin Latest new -->
     <div class="new">
         <div class="latest-title">
@@ -489,22 +618,98 @@
 
     <div class="footercopyright container">
         <div class="design">
-            <p>@2018 Design by <span class="chuxanh">Creative Wp</span> . All Rights Reserved. </p>
+            <p>@2018 Design by <a href="#"><span class="chuxanh">Creative Wp</span></a> . All Rights Reserved. </p>
         </div>
         <div class="payment">
             <img src="assets/images/payment.png" alt="">
         </div>
     </div>
 <!-- End footer -->
-<!-- Begin JS -->
+<!-- Begin JS Categori -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script> 
-$(document).ready(function(){
-  $(".js-menu").click(function(){
-    $(".categori").slideToggle("slow");
-  });
-});
+<script>
+    $(document).ready(function(){
+        $(".js-menu").click(function(){
+            $(".categori").slideToggle("slow");
+        });
+    });
 </script>
+
+<!-- End JS Categori -->
+<!-- js Begin Next slide -->
+<script>
+    let slideIndex = 1;
+        showSlides(slideIndex);
+    
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slider");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slides[slideIndex-1].style.display = "block"; 
+    }
+</script>
+<!-- js End Next slide -->
+<!-- js Bengin coundowntime-->
+<script>
+    if($("#countdown").length>0){
+        const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+        let birthday = "Dec 31, 2022 00:00:00",
+        countDown = new Date(birthday).getTime(),
+        x = setInterval(function() {    
+
+            let now = new Date().getTime(),
+                distance = countDown - now;
+
+            document.getElementById("days").innerText = Math.floor(distance / (day)),
+            document.getElementById("hrs").innerText = Math.floor((distance % (day)) / (hour)),
+            document.getElementById("mins").innerText = Math.floor((distance % (hour)) / (minute)),
+            document.getElementById("sec").innerText = Math.floor((distance % (minute)) / second);
+
+            //do something later when date is reached
+            if (distance < 0) {
+            let countdown = document.getElementById("countdown")
+            countdown.style.display = "none";
+            clearInterval(x);
+            }
+            //seconds
+        }, 0);
+    }
+</script>
+<!-- js End coundownrime -->
+<!-- js Begin next top selling-->
+<script>
+    let sellingIndex = 1;
+        showSelling(sellingIndex);
+    
+    function plusSelling(n) {
+        showSelling(sellingIndex += n);
+    }
+    
+    function showSelling(n) {
+        let i;
+        let selling = document.getElementsByClassName("items-selling-next");
+        if (n > selling.length) {sellingIndex = 1}    
+        if (n < 1) {sellingIndex = selling.length}
+        for (i = 0; i < selling.length; i++) {
+            selling[i].style.display = "none";  
+        }
+        selling[sellingIndex-1].style.display = "block"; 
+    }
+</script>
+<!-- js End next top selling -->
+
 
 </body>
 
